@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="abc.js">
+    </script>
+    	<link href=
+      "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+        rel="stylesheet" />
+      <script src="https://code.jquery.com/jquery-1.10.2.js">
+      </script>
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js">
+      </script>
+    
+</head>
+<body>
+
+    <form method="post" action="process-form.php" class="contact-form">
+        <h2>Contact Us</h2>
+      
+        <div class="input-container">
+          <label for="name">Fisrt Name:</label>
+          <input type="text" id="name" name="name" placeholder="👤Enter Your Fisrt Name" required>
+        </div>
+        <div class="input-container">
+            <label for="name">Last Name:</label>
+            <input type="text" id="name" name="name"  placeholder="👤Enter Your Last Name"required>
+          </div>
+      
+        <div class="input-container">
+          <label for="email">Business Email:</label>
+          <input type="email" id="email" name="email"  placeholder="📧Enter Your Business Email"required>
+        </div>
+        <div class="input-container">
+            <label for="number">Business Number:</label>
+            <input type="text" maxlength="10" pattern="\d{10}" placeholder="📞Enter Your Business Number" title="Please enter exactly 10 digits" />
+          </div>
+          <div><input id="datepicker" width="312" /></div>
+
+        <div class="tacbox">
+            <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a>.</label>
+            <input id="checkbox" type="checkbox" />
+          </div>
+          <div class="captcha">
+            <img src="captcha.php" alt="CAPTCHA">
+            <input type="text" id="captcha" name="captcha" placeholder="Enter CAPTCHA code" required>
+          </div>
+      
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+</body>    
+<input id="datepicker" width="312" />
+<script>
+   var today, datepicker;
+   today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+   datepicker = $('#datepicker').datepicker({
+       maxDate: "0m"
+   });
+</script>
+
+</head>
+</html>
