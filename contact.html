@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <style>
+                body {
+            background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    background: #08071d url("https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container form {
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+
+.container form h1 {
+    color: #fff;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.container form .form-half {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container form .input-container {
+    margin-bottom: 20px;
+}
+
+.container form input,
+.container form select {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    background: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+
+.container form input::placeholder,
+.container form select::placeholder {
+    color: #ddd;
+}
+
+.container form input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.container form label {
+    color: #fff;
+    font-weight: 300;
+}
+
+.container form #button {
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    width: 100px;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.container form #button:hover {
+    opacity: 0.7;
+}
+.accept{
+position:relative;
+left:50px;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="form-half">
+                <h1>Contact Us</h1>
+                <div class="input-container">
+ <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" placeholder="👤 Enter Your First Name" required>
+ <label for="first-name">Last Name:</label>
+        <input type="text" id="first-name" name="first-name" placeholder="👤 Enter Your Last Name" required>
+        <label for="number">Business Number:</label>
+        <input type="text" id="number" name="number" maxlength="10" pattern="\d{10}" placeholder="📞 Enter Your Business Number" title="Please enter exactly 10 digits" required>
+        <label for="email">Business Email:</label>
+        <input type="email" id="email" name="email" placeholder="📧 Enter Your Business Email" required>
+        <label for="email">Time Zone</label>
+        <input type="email" id="email" name="email" placeholder="🕒Select Time Zone" required>
+        
+                </div>
+            </div>
+            <div class="form-half">
+                <div class="input-container">
+                    <label for="topic">Topic of Interest:</label>
+                    <select name="topic" id="topic">
+                        <option value="services">Services</option>
+                        <option value="it-sol">IT Solutions</option>
+                        <option value="company">Company</option>
+                        <option value="who-we-are">Who We Are</option>
+                    </select>
+                </div>
+                <div class="input-container">
+        <label for="datepicker">Date:</label>
+        <input type="text" id="datepicker" name="date" placeholder="Select a date" required>
+                </div>
+
+                <div class="input-container">
+                    <input type="checkbox" id="accept" name="accept" value="accept" required>
+                    <label for="accept">I accept the terms & conditions.</label>
+                </div>
+                <input type="submit" value="Submit" id="button">
+            </div>
+        </form>
+    </div>
+    
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script>
+    $(function() {
+        $("#datepicker").datepicker({
+            maxDate: "0",
+            dateFormat: "yy-mm-dd"
+        });
+    });
+</script>
+</body>
+</html>
